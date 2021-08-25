@@ -12,6 +12,15 @@ export default function(center, radius) {
     },
     includes(Point) {
       // TODO: write your code here
+      // console.log("center points ", center.x);
+      // console.log("radius ", radius);
+      // console.log("points ", Point.x);
+      
+      if ((Point.x - center.x) * (Point.x - center.x) + 
+          (Point.y - center.y) * (Point.y - center.y) <= radius * radius)
+        return true;
+      else
+        return false;
     }
   }
 }
